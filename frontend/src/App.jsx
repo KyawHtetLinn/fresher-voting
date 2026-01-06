@@ -15,7 +15,7 @@ function App() {
 
   // 1. FETCH DATA ON LOAD
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/candidates/')
+    fetch('https://fresher-voting-backend.onrender.com/api/candidates/')
       .then(res => res.json())
       .then(data => {
         setCandidates(data);
@@ -42,7 +42,8 @@ function App() {
 
       try {
         // 2. Send Data to Django
-        const response = await fetch('http://127.0.0.1:8000/api/vote/', {
+        // const response = await fetch('http://127.0.0.1:8000/api/vote/', {
+        const response = await fetch('https://fresher-voting-backend.onrender.com/api/candidates/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
