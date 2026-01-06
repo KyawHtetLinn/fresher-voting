@@ -42,8 +42,8 @@ function App() {
 
       try {
         // 2. Send Data to Django
-        // const response = await fetch('http://127.0.0.1:8000/api/vote/', {
-        const response = await fetch('https://fresher-voting-backend.onrender.com/api/candidates/', {
+        // CHANGED: Pointing to /api/vote/ now
+        const response = await fetch('https://fresher-voting-backend.onrender.com/api/vote/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
