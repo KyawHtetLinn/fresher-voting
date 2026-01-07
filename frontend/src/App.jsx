@@ -106,15 +106,15 @@ function App() {
       {showStats && <StatsModal candidates={candidates} onClose={() => setShowStats(false)} />}
 
       <nav className="bg-cyan-200 text-white p-4 shadow-lg sticky top-0 z-50">
-        <h1 className="text-M font-bold text-cyan-800 text-center my-3">MECHATRONICS ENGINEERING</h1>
-        <h1 className="text-M font-bold text-cyan-800 text-center my-3">2025-2026 FRESHER WELCOME</h1>
+        <h1 className="text-xl font-display font-extrabold text-cyan-800 text-center my-3">MECHATRONICS ENGINEERING</h1>
+        <h1 className="text-l font-display font-extrabold text-cyan-800 text-center my-3">2025-2026 FRESHER WELCOME</h1>
         <div className="container mx-auto flex justify-between items-center mt-5">
           <div>
-             <p className="text-xs text-cyan-800 mt-1">
-               {loading ? '...' : `${totalVotes} People Voted`}
+             <p className="text-xs font-display text-cyan-800 mt-1">
+               {loading ? '...' : `${totalVotes} total votes`}
              </p>
           </div>
-          <div className="text-xs bg-green-500 text-white px-2 py-1 rounded-full font-bold uppercase animate-pulse">
+          <div className="text-xs font-display bg-green-500 text-white px-2 py-1 rounded-full font-bold uppercase animate-pulse">
             Live
           </div>
         </div>
@@ -130,7 +130,7 @@ function App() {
                  <button 
                    onClick={() => toggleCategory(cat)}
                    className={`w-full p-5 flex justify-between items-center transition-colors
-                     ${isOpen ? 'bg-blue-50' : 'bg-white hover:bg-gray-50'}`}
+                     ${isOpen ? 'bg-cyan-300 rounded' : 'bg-white hover:bg-gray-50'}`}
                  >
                    <div className="flex items-center gap-3">
                     <img 
@@ -138,7 +138,7 @@ function App() {
                       alt={cat} 
                       className="w-10 h-10 object-contain" 
                     />
-                     <span className={`font-bold text-lg ${isOpen ? 'text-blue-800' : 'text-gray-700'}`}>
+                     <span className={`font-display font-extrabold text-lg ${isOpen ? 'text-blue-800' : 'text-gray-700'}`}>
                        {cat}
                      </span>
                    </div>
@@ -171,8 +171,8 @@ function App() {
       <footer className="mt-12 text-center text-gray-400 text-xs pb-8">
         <p className='my-2'>Technological University Mandalay(TUM)</p>
         <p className='my-2'>© 2026 Mechatronics Engineering Department</p>
-        <div className="mt-4 hidden">
-            <button onClick={() => setShowStats(true)} className="underline text-blue-300 hover:text-blue-500">
+        <div className="mt-4">
+            <button onClick={() => setShowStats(true)} className="p-2 rounded bg-cyan-100 text-cyan-100 hover:text-blue-500">
                 View Live Results
             </button>
         </div>

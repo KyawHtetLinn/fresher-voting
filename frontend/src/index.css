@@ -1,8 +1,23 @@
-@import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* 1. Import the Font from Google */
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
 
-body {
-    background-color: #f3f4f6;
+/* 2. Import Tailwind (v4 Style) */
+@import "tailwindcss";
+
+/* 3. Define your Custom Font directly here */
+@theme {
+  --font-display: "Playfair", sans-serif;
+}
+
+/* ... Any other custom CSS you had below ... */
+.accordion-content {
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.accordion-content.open {
+  max-height: 2000px;
+  opacity: 1;
 }
