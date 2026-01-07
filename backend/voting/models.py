@@ -30,3 +30,27 @@ class VoteTransaction(models.Model):
 
     def __str__(self):
         return f"Vote by {self.device_id}"
+    
+class King(Candidate):
+    class Meta:
+        proxy = True
+        verbose_name = "🤴 King Candidate"
+        verbose_name_plural = "🤴 Kings"
+
+class Queen(Candidate):
+    class Meta:
+        proxy = True
+        verbose_name = "👸 Queen Candidate"
+        verbose_name_plural = "👸 Queens"
+
+class Mister(Candidate):
+    class Meta:
+        proxy = True
+        verbose_name = "🤵 Mister Candidate"
+        verbose_name_plural = "🤵 Misters"
+
+class Miss(Candidate):
+    class Meta:
+        proxy = True
+        verbose_name = "💃 Miss Candidate"
+        verbose_name_plural = "💃 Misses"

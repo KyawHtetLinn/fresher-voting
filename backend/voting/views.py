@@ -6,12 +6,23 @@ from django.shortcuts import get_object_or_404
 from .models import Candidate, VoteTransaction
 from .serializers import VoteSerializer
 from .serializers import CandidateSerializer
+from django.utils import timezone
+import datetime
+
+
 class CandidateList(generics.ListAPIView):
     queryset = Candidate.objects.all().order_by('candidate_number')
     serializer_class = CandidateSerializer
     
 class CastVote(APIView):
     def post(self, request):
+        current_hour = datetime.datetime.now().hour
+        
+        # if current_hour < 9 or current_hour >= 17:
+        #    return Response(
+        #        {"message": "Voting is closed! (Open 9:00 AM - 5:00 PM)"}, 
+        #        status=status.HTTP_400_BAD_REQUEST
+        #    )
         serializer = VoteSerializer(data=request.data)
         
         # 1. Check if data is valid (did they send IDs?)
