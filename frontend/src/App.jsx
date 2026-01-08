@@ -73,18 +73,26 @@ function App() {
 
         const currentIndex = categories.indexOf(activeCategory);
         
+        // AUTO-ADVANCE LOGIC
         if (currentIndex !== -1 && currentIndex < categories.length - 1) {
            const nextCategory = categories[currentIndex + 1];
+           
            setTimeout(() => {
              setActiveCategory(nextCategory);
              setModal({ message: '', type: '' });
-           }, 1500); 
+             
+             // ▼▼▼ THE FIX IS HERE ▼▼▼
+             // Scroll to the very top of the page smoothly
+             window.scrollTo({ top: 0, behavior: 'smooth' });
+             
+           }, 800); // Keep your 800ms delay (or 1500ms if you prefer)
         } 
         else if (currentIndex === categories.length - 1) {
            setTimeout(() => {
              setActiveCategory(null);
              setModal({ message: '', type: '' });
-           }, 1500);
+             window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll top even when finishing
+           }, 800);
         }
 
       } else {
@@ -106,8 +114,8 @@ function App() {
       {showStats && <StatsModal candidates={candidates} onClose={() => setShowStats(false)} />}
 
       <nav className="bg-cyan-200 text-white p-4 shadow-lg sticky top-0 z-50">
-        <h1 className="text-xl font-display font-extrabold text-cyan-800 text-center my-3">MECHATRONICS ENGINEERING</h1>
-        <h1 className="text-l font-display font-extrabold text-cyan-800 text-center my-3">2025-2026 FRESHER WELCOME</h1>
+        <h1 className="text-2xl font-display font-extrabold text-cyan-900 text-center my-3">MECHATRONICS ENGINEERING</h1>
+        <h1 className="text-l font-display font-extrabold text-cyan-900 text-center my-3">2025-2026 FRESHER WELCOME</h1>
         <div className="container mx-auto flex justify-between items-center mt-5">
           <div>
              <p className="text-xs font-display text-cyan-800 mt-1">
@@ -166,16 +174,17 @@ function App() {
                </div>
              )
            })}
+        <div className="mt-4 text-center">
+              <button onClick={() => setShowStats(true)} className="p-2 font-display rounded bg-cyan-300 text-cyan-700 hover:text-blue-500 shadow-lg">
+                  View Results
+              </button>
+        </div>
       </div>
 
       <footer className="mt-12 text-center text-gray-400 text-xs pb-8">
         <p className='my-2'>Technological University Mandalay(TUM)</p>
         <p className='my-2'>© 2026 Mechatronics Engineering Department</p>
-        <div className="mt-4">
-            <button onClick={() => setShowStats(true)} className="p-2 rounded bg-cyan-100 text-cyan-100 hover:text-blue-500">
-                View Live Results
-            </button>
-        </div>
+
       </footer>
 
       {modal.message && (
