@@ -114,7 +114,7 @@ function App() {
       {showStats && <StatsModal candidates={candidates} onClose={() => setShowStats(false)} />}
 
       <nav className="bg-cyan-200 text-white p-4 shadow-lg sticky top-0 z-50">
-        <h1 className="text-xl font-display font-extrabold text-cyan-900 text-center my-3">MECHATRONICS ENGINEERING</h1>
+        <h1 className="text-2xl font-display font-extrabold text-cyan-900 text-center my-3">MECHATRONICS ENGINEERING</h1>
         <h1 className="text-l font-display font-extrabold text-cyan-900 text-center my-3">2025-2026 FRESHER WELCOME</h1>
         <div className="container mx-auto flex justify-between items-center mt-5">
           <div>
