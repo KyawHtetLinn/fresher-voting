@@ -114,17 +114,21 @@ function App() {
       {showStats && <StatsModal candidates={candidates} onClose={() => setShowStats(false)} />}
 
       <nav className="bg-cyan-200 text-white p-4 shadow-lg sticky top-0 z-50">
-        <h1 className="text-2xl font-display font-extrabold text-cyan-900 text-center my-3">MECHATRONICS ENGINEERING</h1>
-        <h1 className="text-l font-display font-extrabold text-cyan-900 text-center my-3">2025-2026 FRESHER WELCOME</h1>
+        <h1 className="text-2xl font-display font-extrabold text-cyan-900 text-center my-3 text-shadow-lg">MECHATRONICS ENGINEERING</h1>
+        <h1 className="text-xl font-display font-extrabold text-cyan-900 text-center my-3 text-shadow-md">2025-2026 FRESHER WELCOME</h1>
         <div className="container mx-auto flex justify-between items-center mt-5">
           <div>
              <p className="text-xs font-display text-cyan-800 mt-1">
                {loading ? '...' : `${totalVotes} total votes`}
              </p>
           </div>
+          <div className='text-s font-display text-cyan-900'>
+            12.1.2026
+          </div>
           <div className="text-xs font-display bg-green-500 text-white px-2 py-1 rounded-full font-bold uppercase animate-pulse">
             Live
           </div>
+
         </div>
       </nav>
 
@@ -182,8 +186,8 @@ function App() {
       </div>
 
       <footer className="mt-12 text-center text-gray-400 text-xs pb-8">
-        <p className='my-2'>Technological University Mandalay(TUM)</p>
-        <p className='my-2'>© 2026 Mechatronics Engineering Department</p>
+        <p className='my-2 font-display'>Technological University Mandalay(TUM)</p>
+        <p className='my-2 font-display'>© 2026 Mechatronics Engineering Department</p>
 
       </footer>
 
