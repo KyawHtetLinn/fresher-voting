@@ -186,6 +186,7 @@ function App() {
       </div>
 
       <footer className="mt-12 text-center text-gray-400 text-xs pb-8">
+        <p class='mb-5 mx-10 text-red-500 font-display text-md'>This is a demo voting, and all votes will be removed once the event start.</p>
         <p className='my-2 font-display'>Technological University Mandalay(TUM)</p>
         <p className='my-2 font-display'>© 2026 Mechatronics Engineering Department</p>
 
