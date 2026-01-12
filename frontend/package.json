@@ -12,6 +12,7 @@
   "dependencies": {
     "@fingerprintjs/fingerprintjs": "^5.0.1",
     "@tailwindcss/vite": "^4.1.18",
+    "framer-motion": "^12.25.0",
     "init": "^0.1.2",
     "react": "^19.2.0",
     "react-confetti": "^6.4.0",
