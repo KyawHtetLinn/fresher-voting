@@ -213,9 +213,9 @@ function App() {
       title: "KING",
       burmeseTitle: "King",
       icon: "/icons/king.png",
-      winnerName: "?", 
-      candidateNo: "?",         
-      subtext: "? votes",
+      winnerName: "မောင်မင်းပြည့်ဖြိုး", 
+      candidateNo: "13",         
+      subtext: "80 votes",
       color: "from-yellow-300 to-yellow-600", 
       textColor: "text-yellow-400"
     },
@@ -224,9 +224,9 @@ function App() {
       title: "QUEEN",
       burmeseTitle: "Queen",
       icon: "/icons/queen.png",
-      winnerName: "?", 
-      candidateNo: "?",   
-      subtext: "? Votes",
+      winnerName: "မနန်းဖွေးလောဝ်", 
+      candidateNo: "11",   
+      subtext: "82 Votes",
       color: "from-yellow-300 to-yellow-600", 
       textColor: "text-yellow-400"
     },
@@ -234,9 +234,9 @@ function App() {
       title: "MISTER",
       burmeseTitle: "Mister",
       icon: "/icons/mister.png",
-      winnerName: "?", 
-      candidateNo: "?",      
-      subtext: "? Votes",
+      winnerName: "မောင်ဝေဖြိုး", 
+      candidateNo: "1",      
+      subtext: "26 Votes",
       color: "from-yellow-300 to-yellow-600", 
       textColor: "text-yellow-400"
     },
@@ -244,9 +244,9 @@ function App() {
       title: "MISS",
       burmeseTitle: "Miss",
       icon: "/icons/miss.png",
-      winnerName: "?", 
-      candidateNo: "?", 
-      subtext: "? Votes",
+      winnerName: "မအိအိအောင်", 
+      candidateNo: "1", 
+      subtext: "64 Votes",
       color: "from-yellow-300 to-yellow-600",
       textColor: "text-yellow-400"
     },
@@ -254,9 +254,9 @@ function App() {
       title: "PRINCE",
       burmeseTitle: "Prince",
       icon: "/icons/king.png",       
-      winnerName: "?", 
-      candidateNo: "?",             
-      subtext: "? Votes",
+      winnerName: "မောင်ခန့်ဝေသူ", 
+      candidateNo: "11",             
+      subtext: "77 Votes",
       color: "from-gray-300 to-gray-500", 
       textColor: "text-gray-300"
     },
@@ -264,9 +264,9 @@ function App() {
       title: "PRINCESS",
       burmeseTitle: "Princess",
       icon: "/icons/queen.png",  
-      winnerName: "?", 
-      candidateNo: "?",  
-      subtext: "? Votes",
+      winnerName: "မနန်းအွန်အွန်လှိုင်းဟန်", 
+      candidateNo: "5",  
+      subtext: "71 Votes",
       color: "from-gray-300 to-gray-500", 
       textColor: "text-gray-300"
     },
@@ -274,9 +274,9 @@ function App() {
       title: "POPULAR MISTER",
       burmeseTitle: "Popular Mister",
       icon: "/icons/mister.png",
-      winnerName: "?", 
-      candidateNo: "?",
-      subtext: "? Votes",
+      winnerName: "မောင်နိုင်မင်းလတ်", 
+      candidateNo: "7",
+      subtext: "22 Votes",
       color: "from-purple-400 to-pink-600",
       textColor: "text-purple-400"
     },
@@ -285,9 +285,9 @@ function App() {
       title: "POPULAR MISS",
       burmeseTitle: "Popular Vote",
       icon: "/icons/miss.png",
-      winnerName: "?", 
-      candidateNo: "?",
-      subtext: "? Votes",
+      winnerName: "မဝင့်ဝင့်ထည်", 
+      candidateNo: "4",
+      subtext: "53 Votes",
       color: "from-purple-400 to-pink-600", 
       textColor: "text-purple-400"
     }
@@ -343,7 +343,7 @@ function App() {
                   </div>
                   
                   {/* Name */}
-                  <h2 className="text-md md:text-3xl font-bold text-white mb-2 truncate font-display">
+                  <h2 className="text-md md:text-lg font-bold text-white mb-2 truncate font-display">
                     {person.winnerName}
                   </h2>
                   
