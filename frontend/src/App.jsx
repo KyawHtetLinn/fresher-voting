@@ -364,8 +364,11 @@ function App() {
         </div>
       </div>
 
-      <footer className="mt-24 text-center text-slate-500 text-sm pb-10">
-        <p className="mt-2 text-xs ">Department of Mechatronics Engineering</p>
+      <footer className="mt-12 text-center text-gray-400 text-xs pb-8">
+    
+        <p className='my-2 font-display'>Technological University Mandalay(TUM)</p>
+        <p className='my-2 font-display'>© 2026 Mechatronics Engineering Department</p>
+
       </footer>
 
     </div>
